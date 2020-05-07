@@ -1,5 +1,9 @@
 class Card
+
+  attr_reader :type #we need this so the method TYPE can be read. WIthout it, by just initializing the method won't solve the  "undefined method `type'" error from RSpec
+
   def initialize(type)
+    @type = type
   end
 end
 
