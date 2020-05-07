@@ -1,21 +1,24 @@
 class Card
 
-  attr_reader :type #we need this so the method TYPE can be read. WIthout it, by just initializing the method won't solve the  "undefined method `type'" error from RSpec
+  attr_reader :rank, :suit #we need this so the method TYPE can be read. WIthout it, by just initializing the method won't solve the  "undefined method `type'" error from RSpec
 
-  def initialize(type)
-    @type = type
+  def initialize(rank,suit)
+    @rank = rank
+    @suit = suit
   end
 end
 
 RSpec.describe Card do
-  it "has a suite" do
-    card = Card.new("Spades")
-    expect(card.suite).to eq("Spades")
+  it "has a suit" do
+    card = Card.new("Ace", "Spades")
+    expect(card.suit).to eq("Spades")
   end
+
   it "has a rank" do
-    card = Card.new("Ace")
+    card = Card.new("Ace", "Spades")
     expect(card.rank).to eq("Ace") #it is a GOOD PRACTICE to test thins separately. NOT using many expects in the same IT
   end
+
 end
 
 #what DESCRIBE creates is known as an EXAMPLE GROUP'= group of related tests
