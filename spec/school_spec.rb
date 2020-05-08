@@ -5,9 +5,7 @@ attr_reader :name, :students
     @name = name
     @students = []
   end
-
 end
-
 
 
 RSpec.describe School do

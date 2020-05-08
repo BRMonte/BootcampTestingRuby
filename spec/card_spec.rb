@@ -9,14 +9,17 @@ class Card
 end
 
 RSpec.describe Card do
+
+  before do
+    @card = Card.new("Ace", "Spades") #THIS IS A HOOK
+  end
+
   it "has a suit" do
-    card = Card.new("Ace", "Spades")
-    expect(card.suit).to eq("Spades")
+    expect(@card.suit).to eq("Spades")
   end
 
   it "has a rank" do
-    card = Card.new("Ace", "Spades")
-    expect(card.rank).to eq("Ace") #it is a GOOD PRACTICE to test thins separately. NOT using many expects in the same IT
+    expect(@card.rank).to eq("Ace") #it is a GOOD PRACTICE to test thins separately. NOT using many expects in the same IT
   end
 
 end
