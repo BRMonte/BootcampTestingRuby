@@ -1,4 +1,6 @@
 #example to DRY test code using a METHOD
+# but it has problems, cause every time the method is called, a new instance is given with no reference to the previous one
+# so if you need not only to READ but also to WRITE inputs (attr_acessor) this can crerate problems
 
 class Cutlery
 
