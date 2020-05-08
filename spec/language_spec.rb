@@ -10,7 +10,7 @@
 
 class Language
 
-  attr_reader :name, :family
+  attr_accessor :name, :family
 
   def initialize(name, family)
     @name = name
@@ -21,10 +21,12 @@ end
 
 RSpec.describe Language do
 
-  let(:language) {Language.new("Portugues", "Latin")}
+  let(:language) {Language.new("Portugues", "Latin")} #MEMORIZATION syntax
 
   it "has a name" do
     expect(language.name).to eq("Portugues")
+    language.name = "Frances"
+    expect(language.name).to eq("Frances")
   end
 
   it "belongs to a family" do
