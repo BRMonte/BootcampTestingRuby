@@ -1,6 +1,6 @@
 class Card
 
-  attr_reader :rank, :suit #we need this so the method TYPE can be read. WIthout it, by just initializing the method won't solve the  "undefined method `type'" error from RSpec
+  attr_reader :rank, :suit #we need this so the methodattributes can be read. WIthout it, by just initializing the method won't solve the  "undefined method" error from RSpec
 
   def initialize(rank,suit)
     @rank = rank
@@ -10,19 +10,14 @@ end
 
 RSpec.describe Card do
 
-  def card
-    Card.new("Ace", "Spades")
-  end
-
-
   it "has a rank" do
-    # @card = Card.new("Ace", "Spades")
-    expect(card.rank).to eq("Ace") #it is a GOOD PRACTICE to test thins separately. NOT using many expects in the same IT
+    @card = Card.new("Ace", "Spades")
+    expect(@card.rank).to eq("Ace") #it is a GOOD PRACTICE to test thins separately. NOT using many expects in the same IT
   end
 
   it "has a suit" do
-    # @card = Card.new("Ace", "Spades")
-    expect(card.suit).to eq("Spades")
+    @card = Card.new("Ace", "Spades")
+    expect(@card.suit).to eq("Spades")
   end
 
 end
