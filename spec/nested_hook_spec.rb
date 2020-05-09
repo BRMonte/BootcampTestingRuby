@@ -4,7 +4,6 @@ RSpec.describe 'something' do
     puts "OUTER before context"
   end
 
-
    before(:example) do
     puts "OUTER before example"
   end
