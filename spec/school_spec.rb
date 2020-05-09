@@ -1,3 +1,5 @@
+#this is an ASSIGMENT of the course
+
 class School
 attr_reader :name, :students
 

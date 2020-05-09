@@ -1,6 +1,6 @@
 class Card
 
-  attr_reader :rank, :suit #we need this so the methodattributes can be read. WIthout it, by just initializing the method won't solve the  "undefined method" error from RSpec
+  attr_reader :rank, :suit #we need this so the method attributes can be read. WIthout it, by just initializing the method won't solve the  "undefined method" error from RSpec
 
   def initialize(rank,suit)
     @rank = rank
