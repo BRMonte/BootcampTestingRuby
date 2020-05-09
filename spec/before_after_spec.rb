@@ -1,26 +1,26 @@
 RSpec.describe 'before_after' do
 
-  before(:context) do
+  before(:context) do #this is a HOOK
     puts "This is run only once before the whole context"
   end
 
-  after(:context) do
+  after(:context) do #this is a HOOK
     puts "This will run only once after all processes"
   end
 
-  before(:example) do
+  before(:example) do #this is a HOOK
     puts "This will run before each example"
   end
 
-  after(:example) do
+  after(:example) do #this is a HOOK
     puts "This will ren after each example"
   end
 
-  it "is just a random example" do
+  it "is just a random example" do #this is an example
     expect(5 * 2).to eq(10)
   end
 
-  it "is just another random example" do
+  it "is just another random example" do #this is an example
     expect(2 + 5).to eq(7)
   end
 
