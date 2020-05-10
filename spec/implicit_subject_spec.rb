@@ -13,6 +13,10 @@ RSpec.describe Hash do
   it "is isolated between examples" do #here the Hash turn back into an empty one
     expect(subject.length).to eq(0)
   end
-
-
 end
+
+# What does the subject helper method return?
+# R: An instance of the class under test.
+
+# Why is better to pass a class argument to the describe method instead of a string with the class name?
+# R: With a class argument, RSpec is able to instantiate an instance of the class and make it lazily available via the subject method.
