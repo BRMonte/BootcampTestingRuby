@@ -24,7 +24,7 @@ end
 
 #what DESCRIBE creates is known as an EXAMPLE GROUP'= group of related tests
 # IT can be replaced by SPECIFY
-#it can teke a string as an argument; the class it self; a method etc
+#it can take a string as an argument; the class it self; a method etc
 #each IT method creates 1 EXAMPLE. So whatever is inside IT DO END is 1 example
 #"has a type" -> this string argument should be a description of what i'm testing. NOT a description of HOW what i'm testing works, bout of WHAT IS
 #a method for describing what we are testing
