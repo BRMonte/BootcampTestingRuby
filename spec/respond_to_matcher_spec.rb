@@ -1,4 +1,9 @@
-# Polimorphism:
+# Polimorphism: significa ter várias formas de fazer uma "certa coisa".
+# que "certa coisa" é essa? R: chamadas de métodos
+# Polimorfismo significa que uma chamada de método pode ser executada de várias formas (ou polimorficamente).
+# Quem decide "a forma" é o objeto que recebe a chamada: Se um objeto "a" chama um método do objeto "b", então o objeto "b" decide a forma de implementação
+# é o tipo do objeto "b" que importa.
+# ex: método grita(). Então a chamada b.grita() será um grito humano se "b" for um humano; será um grito de macaco, se "b" for um macaco.
 
 class HotChocolate
   def drink
