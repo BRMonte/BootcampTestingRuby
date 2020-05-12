@@ -1,6 +1,7 @@
 class Deck
 
   def self.build
+    #business logic to build a whole bunch of cards
   end
 
 end
